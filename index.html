@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Explore the Planets</h1>
+        <div class="planet-container">
+            <div class="planet-wrapper">
+                <div id="mercury" class="planet" ondblclick="showModal('Mercury')" ></div>
+                <p class="planet-name">Mercury</p>
+            </div>
+            <div class="planet-wrapper">
+                <div id="venus" class="planet" ondblclick="showModal('Venus')" ></div>
+                <p class="planet-name">Venus</p>
+            </div>
+            <div class="planet-wrapper">
+                <div id="earth" class="planet" ondblclick="showModal('Earth')" ></div>
+                <p class="planet-name">Earth</p>
+            </div>
+            <div class="planet-wrapper">
+                <div id="mars" class="planet" ondblclick="showModal('Mars')" ></div>
+                <p class="planet-name">Mars</p>
+            </div>
+            <div class="planet-wrapper">
+                <div id="jupiter" class="planet" ondblclick="showModal('Jupiter')" ></div>
+                <p class="planet-name">Jupiter</p>
+            </div>
+            <div class="planet-wrapper">
+                <div id="saturn" class="planet" ondblclick="showModal('Saturn')" ></div>
+                <p class="planet-name">Saturn</p>
+            </div>
+            <div class="planet-wrapper">
+                <div id="uranus" class="planet" ondblclick="showModal('Uranus')" ></div>
+                <p class="planet-name">Uranus</p>
+            </div>
+            <div class="planet-wrapper">
+                <div id="neptune" class="planet" ondblclick="showModal('Neptune')" ></div>
+                <p class="planet-name">Neptune</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Planet Information -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="planetName">Planet Name</h2>
+            <select id="languageSelect" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="ge">Georgian</option>
+            </select>
+            <p id="planetInfo">Planet information goes here.</p>
+            <button id="voiceButton" onclick="speakInfo()">🔊 Speak Info</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
